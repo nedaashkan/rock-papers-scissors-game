@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #341731;
+}
+.game-body {
+  background: linear-gradient(180deg, rgba(206, 59, 191, 0) 0%, #f9dbf6 100%);
+  /* height: 500px; */
+  margin-top: 60px;
+  border-radius: 50px;
+}
+.start-game-btn {
+  font-family: "Anton";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #f3f3f3;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  background: #341731;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+.heading {
+  font-family: "Anton", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 75px;
+  letter-spacing: 0.01em;
+  color: #f3f3f3;
+}
+.paper {
+  position: relative;
+}
+.rock {
+  position: relative;
+}
+.scissors {
+  position: relative;
+ 
+}
+.col-1 {
+  border: 1px solid rgb(255, 0, 0);
+}
+.col-2 {
+  border: 1px solid rgb(255, 115, 0);
+}
+.col-3 {
+  border: 1px solid rgb(255, 238, 0);
+}
+.col-4 {
+  border: 1px solid rgb(115, 255, 0);
+}
+.col-5 {
+  border: 1px solid rgb(0, 255, 170);
+}
+.col-6 {
+  border: 1px solid rgb(0, 38, 255);
+}
+.col-7 {
+  border: 1px solid rgb(93, 9, 100);
+}
+.col-8 {
+  border: 1px solid rgb(255, 18, 196);
+}
+.col-9 {
+  border: 1px solid rgb(80, 40, 52);
+}
+.col-10 {
+  border: 1px solid rgb(10, 44, 7);
+}
+.col-11 {
+  border: 1px solid rgb(0, 132, 255);
+}
+.col-12 {
+  border: 1px solid rgb(223, 255, 80);
+}
