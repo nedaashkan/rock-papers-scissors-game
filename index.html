@@ -28,32 +28,22 @@
     <title>Rock papers scissors</title>
   </head>
   <body>
-
     <!-- part 1 -->
-    
-    <div class="container">
-      <div class="game-body w-100">
-        <div class="row gx-5 justify-content-center">
-          <div class="col-8 col-lg-3">
-            <h1 class="heading mt-1">Rock papers scissors</h1>
-            <button class="start-game-btn w-100 mt-5">start game</button>
-          </div>
-          <div class="col-12 col-lg-7">
-            <img
-              src="images/paper-homepage.svg"
-              alt="a hand showing paper"
-              class="paper"
-            />
 
+    <div class="container">
+      <div class="game-body" id="game-content">
+        <div class="row gx-0 justify-content-center">
+          <div class="col-9 col-sm-5 col-md-4 col-lg-3 mt-lg-5">
+            <h1 class="heading">Rock papers scissors</h1>
+            <button class="w-100 mt-2 mt-md-2 mt-lg-5" onclick="startGame()">
+              start game
+            </button>
+          </div>
+          <div class="col-9 col-sm-6 col-md-6 col-lg-6">
             <img
-              src="images/scissors-homepage.svg"
-              alt="a hand showing scissors"
-              class="scissors"
-            />
-            <img
-              src="images/rock-homepage.svg"
-              alt="a hand showing rock"
-              class="rock"
+              src="images/paper-scissors-rock-home-page.png"
+              alt="pictures hands paper scissors rock"
+              class="w-100 mt-sm-5"
             />
           </div>
         </div>
@@ -65,59 +55,76 @@
 
 <!-- part 2 -->
 
-<!-- <div class="row">
-  <div class="col-3">
-    <img src="" alt="a hand showing rock" class="rock" />
+<!-- <div class="row gx-0">
+  <div class="col-4">
+    <img src="images/rock.png" alt="a hand showing rock" class="rock w-100" />
   </div>
-  <div class="col-3">
-    <img src="" alt="a hand showing paper" class="paper" />
+  <div class="col-4">
+    <img
+      src="images/paper.png"
+      alt="a hand showing paper"
+      class="paper w-100"
+    />
   </div>
-  <div class="col-3">
-    <img src="" alt="a hand showing scissors" class="scissors" />
-  </div>
-</div>
-<div class="row">
-  <div class="col">
-    <button>rock</button>
-  </div>
-  <div class="col">
-    <button>papers</button>
-  </div>
-  <div class="col">
-    <button>scissors</button>
+  <div class="col-4">
+    <img
+      src="images/scissors.png"
+      alt="a hand showing scissors"
+      class="scissors w-100"
+    />
   </div>
 </div>
-<div class="row">
-  <div class="col">
-    <h1>make your choice</h1>
+<div class="row gx-0">
+  <div class="col-4 mt-5 d-flex justify-content-center">
+    <button class="rock-btn mt-5" onclick="possibleChose('rock')">rock</button>
+  </div>
+  <div class="col-4 mt-5 d-flex justify-content-center">
+    <button class="paper-btn mt-5" onclick="possibleChose('papers')">
+      papers
+    </button>
+  </div>
+  <div class="col-4 mt-5 d-flex justify-content-center">
+    <button class="scissors-btn mt-5" onclick="possibleChose('scissors')">
+      scissors
+    </button>
+  </div>
+</div>
+<div class="row gx-0">
+  <div class="col-12 mt-5">
+    <h1 class="make-choose mt-4">make your choice</h1>
   </div>
 </div> -->
 
 <!-- part 3 -->
 
-<!-- <div class="row">
-  <div class="col"><h2>computer</h2></div>
-  <div class="col"><h2>you</h2></div>
-</div>
-<div class="row">
-  <div class="col"><img src="" alt="" srcset="" /></div>
-  <div class="col"><img src="" alt="" srcset="" /></div>
-</div>
-<div class="row">
-  <div class="col">
-    <h1>
-    ohh ! you lost
-    yohoo ! you won
-    there is no winner in this game !
-    </h1>
+<!-- <div class="row gx-0">
+  <div class="col-6 d-flex justify-content-center">
+    <h2 class="computer">computer</h2>
+  </div>
+  <div class="col-6 d-flex justify-content-center">
+    <h2 class="you">you</h2>
   </div>
 </div>
-<div class="row">
-  <div class="col">
-    <button>try again</button>
+<div class="row gx-0">
+  <div class="col-6">
+    <img src="images/rock.png" alt="" srcset="" class="w-100" />
+  </div>
+  <div class="col-6">
+    <img src="images/rock.png" alt="" srcset="" class="rock-img w-100" />
+  </div>
+</div>
+<div class="row gx-0">
+  <div class="col-12 d-flex justify-content-center">
+    <h1 class="result">ohh ! you lost yohoo</h1>
+  </div>
+</div>
+<div class="row gx-0">
+  <div class="col-12 d-flex justify-content-center">
+    <button onclick="tryAgain()">try again</button>
   </div>
 </div> -->
 
+<!-- part 4 -->
 <!-- <div class="row">
   <div class="col">
     <h1>coded by neda ashkan</h1>
