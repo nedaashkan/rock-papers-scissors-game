@@ -1,104 +1,69 @@
 let gameContent = document.getElementById("game-content");
-console.log(gameContent);
+let displayComputerChoice = document.getElementById("computer-choice-img");
+let displayPlayerChoice = document.getElementById("player-choice-img");
+let displayResult = document.getElementById("result");
+let playerChoice = "";
+let computerChoice = "";
+let gameContent1 = document.getElementById("game-content-1");
+let gameContent2 = document.getElementById("game-content-2");
+let gameContent3 = document.getElementById("game-content-3");
+gameContent3.style.display = "none";
+gameContent2.style.display = "none";
+
 function startGame() {
-  gameContent.innerHTML = `<div class="row gx-0">
-  <div class="col-4">
-    <img src="images/rock.png" alt="a hand showing rock" class="rock w-100" />
-  </div>
-  <div class="col-4">
-    <img
-      src="images/paper.png"
-      alt="a hand showing paper"
-      class="paper w-100"
-    />
-  </div>
-  <div class="col-4">
-    <img
-      src="images/scissors.png"
-      alt="a hand showing scissors"
-      class="scissors w-100"
-    />
-  </div>
-</div>
-<div class="row gx-0">
-  <div class="col-4 mt-5 d-flex justify-content-center">
-    <button class="rock-btn mt-5" onclick="possibleChose('rock')">rock</button>
-  </div>
-  <div class="col-4 mt-5 d-flex justify-content-center">
-    <button class="paper-btn mt-5" onclick="possibleChose('papers')">papers</button>
-  </div>
-  <div class="col-4 mt-5 d-flex justify-content-center">
-    <button class="scissors-btn mt-5" onclick="possibleChose('scissors')">scissors</button>
-  </div>
-</div>
-<div class="row gx-0">
-  <div class="col-12 mt-5">
-    <h1 class="make-choose mt-4">make your choice</h1>
-  </div>
-</div>`;
+  gameContent1.style.display = "none";
+  gameContent2.style.display = "block";
 }
-function possibleChose() {
-  gameContent.innerHTML = `<div class="row gx-0">
-  <div class="col-6 d-flex justify-content-center">
-    <h2 class="computer">computer</h2>
-  </div>
-  <div class="col-6 d-flex justify-content-center">
-    <h2 class="you">you</h2>
-  </div>
-</div>
-<div class="row gx-0">
-  <div class="col-6">
-    <img src="images/rock.png" alt="" srcset="" class="w-100" />
-  </div>
-  <div class="col-6">
-    <img src="images/rock.png" alt="" srcset="" class="rock-img w-100" />
-  </div>
-</div>
-<div class="row gx-0">
-  <div class="col-12 d-flex justify-content-center">
-    <h1 class="result">ohh ! you lost yohoo</h1>
-  </div>
-</div>
-<div class="row gx-0">
-  <div class="col-12 d-flex justify-content-center">
-    <button onclick="tryAgain()">try again</button>
-  </div>
-</div>`;
+function startAnimation() {}
+displayComputerChoice.src = "images/rock.png";
+displayPlayerChoice.src = "images/rock.png";
+function possibleChose(choice) {
+  gameContent2.style.display = "none";
+  gameContent3.style.display = "block";
+  startAnimation();
+  playerChoice = choice;
+  console.log(choice);
+  if (playerChoice === "rock") {
+    displayPlayerChoice.src = "images/rock.png";
+  } else if (playerChoice === "papers") {
+    displayPlayerChoice.src = "images/paper.png";
+  } else if (playerChoice === "scissors") {
+    displayPlayerChoice.src = "images/scissors.png";
+  }
+  generateComputerChoice();
+}
+function generateComputerChoice() {
+  let computerPossibleChoice = ["rock", "papers", "scissors"];
+  let randomIndex = Math.floor(Math.random() * 3);
+  computerChoice = computerPossibleChoice[randomIndex];
+  if (computerChoice === "rock") {
+    displayComputerChoice.src = "images/rock.png";
+  } else if (computerChoice === "papers") {
+    displayComputerChoice.src = "images/paper.png";
+  } else if (computerChoice === "scissors") {
+    displayComputerChoice.src = "images/scissors.png";
+  }
+  getResult();
+}
+function getResult() {
+  if (computerChoice === playerChoice) {
+    result = "there is no winner !";
+  } else if (computerChoice === "rock" && playerChoice === "papers") {
+    result = "yohoo ! you won !";
+  } else if (computerChoice === "rock" && playerChoice === "scissors") {
+    result = "ohh ! you lost";
+  } else if (computerChoice === "papers" && playerChoice === "rock") {
+    result = "ohh ! you lost";
+  } else if (computerChoice === "papers" && playerChoice === "scissors") {
+    result = "yohoo ! you won !";
+  } else if (computerChoice === "scissors" && playerChoice === "rock") {
+    result = "yohoo ! you won !";
+  } else if (computerChoice === "scissors" && playerChoice === "papers") {
+    result = "ohh ! you lost";
+  }
+  displayResult.textContent = result;
 }
 function tryAgain() {
-  gameContent.innerHTML = `<div class="row gx-0">
-  <div class="col-4">
-    <img src="images/rock.png" alt="a hand showing rock" class="rock w-100" />
-  </div>
-  <div class="col-4">
-    <img
-      src="images/paper.png"
-      alt="a hand showing paper"
-      class="paper w-100"
-    />
-  </div>
-  <div class="col-4">
-    <img
-      src="images/scissors.png"
-      alt="a hand showing scissors"
-      class="scissors w-100"
-    />
-  </div>
-</div>
-<div class="row gx-0">
-  <div class="col-4 mt-5 d-flex justify-content-center">
-    <button class="rock-btn mt-5" onclick="rock()">rock</button>
-  </div>
-  <div class="col-4 mt-5 d-flex justify-content-center">
-    <button class="paper-btn mt-5" onclick="papers()">papers</button>
-  </div>
-  <div class="col-4 mt-5 d-flex justify-content-center">
-    <button class="scissors-btn mt-5" onclick="scissors()">scissors</button>
-  </div>
-</div>
-<div class="row gx-0">
-  <div class="col-12 mt-5">
-    <h1 class="make-choose mt-4">make your choice</h1>
-  </div>
-</div>`;
+  startGame();
+  gameContent3.style.display = "none";
 }

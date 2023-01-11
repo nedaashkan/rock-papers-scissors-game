@@ -5,18 +5,15 @@
 }
 body {
   background: #341731;
+  font-family: "Anton", sans-serif;
 }
-.game-body {
+.game-content {
   background: linear-gradient(180deg, rgba(206, 59, 191, 0) 0%, #f9dbf6 100%);
-  border-radius: 50px;
-  margin-top: 60px;
+  height: 100%;
+  border-radius: 10px;
 }
 button {
-  font-family: "Anton";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  text-align: center;
+  font-size: 25px;
   letter-spacing: 0.01em;
   color: #f3f3f3;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -25,57 +22,69 @@ button {
   border-radius: 10px;
   padding: 10px 15px;
   cursor: pointer;
-  transition: ease-in-out 250ms;
+  transition: all 200ms ease;
 }
 button:hover {
   box-shadow: 0 0 15px #46073f;
-  scale: 1px;
-  transform: translateY(-3px);
 }
-.heading {
-  font-family: "Anton", sans-serif;
-  font-style: normal;
-  font-weight: 400;
+.game-header,
+.computer-header,
+.you-header {
   font-size: 60px;
   line-height: 75px;
   letter-spacing: 0.01em;
   color: #f3f3f3;
 }
-.computer,
-.you {
-  font-family: "Anton", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 60px;
-  line-height: 75px;
-  letter-spacing: 0.01em;
-  color: #f3f3f3;
+.you-header,
+.computer-header {
+  font-size: 40px;
 }
-.make-choose {
-  font-family: "Anton", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 60px;
+.make-choice {
+  font-size: 50px;
   letter-spacing: 0.01em;
   color: #341731;
   text-align: center;
 }
 .result {
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
   font-size: 40px;
   letter-spacing: 0.01em;
   color: #341731;
 }
-.rock {
-  transform: rotate(90deg);
-}
-.paper {
-  transform: rotate(100deg);
-}
-.scissors {
-  transform: rotate(90deg);
+.code-header {
+  font-size: 30px;
+  letter-spacing: 0.01em;
+  color: #341731;
+  text-align: center;
 }
 .rock-img {
+  transform: rotate(90deg);
+}
+.papers-img {
+  transform: rotate(100deg);
+}
+.scissors-img {
+  transform: rotate(90deg);
+}
+.player-choice-rock-img {
   transform: rotate(180deg);
+}
+.linkedin,
+.github {
+  font-size: 30px;
+  color: #341731;
+  transition: all 200ms ease;
+  cursor: pointer;
+  padding: 10px;
+}
+.linkedin:hover {
+  color: #0072b1;
+}
+.github:hover {
+  color: #171515;
+}
+.social-media-box {
+  text-align: center;
+}
+.space {
+  visibility: hidden;
 }
